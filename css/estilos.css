@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+}
+body{
+  
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial;
+    text-align: center; /*En el body tecnicamente el text-align centra nuestra caja cuando esta inline-block*/
+}
+nav,footer{
+    background-color: rgb(25, 33, 36);
+    color:white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding:20px;
+}
+footer{
+    font-size: 20px;
+    height: 50px;
+}
+nav ul{
+    list-style:none;
+    display: inline;
+    /*border:2px solid white;*/
+    width: 50%;
+    justify-items: center;
+}
+nav ul li{
+    display: inline;
+    font-size: 25px;
+    margin:0 20px;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color:grey;
+}
+nav ul li a:active{
+    color:rgb(217, 205, 205);
+}
+.tarjeta{
+    /*border:2px solid black;*/
+    display: inline-block; /*Lo que hace es acomodar de acuerdo al espacio entre el borde*/
+    margin: 10%;
+    height: 540px;
+    width: 25%;
+    position: relative;
+    background-color: rgb(10, 62, 62);
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+   
+}
+.titulo{
+   /* border:2px solid black;*/
+    color:white;
+    padding:20px;
+}
+.imagen{
+   /* border:2px solid black;*/
+}
+#compro{
+    color:white;
+
+}
+.descripcion{
+    /*border:2px solid black;*/
+    box-shadow: 0 0 4px black;
+    display: grid;
+    align-items: center;
+    align-items: center;
+    margin:20px;
+    height: 150px;
+    background-color: rgb(25, 33, 36);
+    border-radius: 10px;
+    color:white;
+}
+
+.botones{
+  /*  border:2px solid black;*/
+    position: absolute;
+    bottom:0;
+    width: 90%;
+    padding:20px;
+    display: flex;
+    justify-content: space-around;
+}
+.botones button{
+    font-size: 20px;
+    padding:12px;
+    border-radius: 5px;
+    color:white;
+
+}
+.botones button:first-child{
+    background-color: rgb(11, 103, 11);
+    border-style: none;
+}
+.botones button:first-child:hover{
+    background-color: rgb(6, 51, 6);
+    cursor: pointer;
+    
+}
+.botones button:first-child:active{
+    background-color: rgb(37, 220, 37);
+    cursor: pointer;
+    
+}
+.botones button:nth-child(2){
+    background-color: rgb(145, 145, 33);
+    border-style: none;
+    
+}
+.botones button:nth-child(2):hover{
+    background-color: rgb(92, 92, 15);
+   cursor: pointer;
+    
+}
+.botones button:nth-child(2):active{
+    background-color: rgb(223, 223, 69);
+   
+    
+}
+
+@media (max-width:1115px){
+    body{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    .tarjeta{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .imagen{
+        width: 100%;
+    }
+    .imagen img{
+        max-width: 100%;
+    }
+    .botones{
+        max-width: 100%;
+    }
+    .botones button{
+        max-width: 100%;
+    }
+}
+
+@media (max-width:541px) {
+    .tarjeta{
+        width: 100%;
+        
+        
+    }
+    .botones{
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 30px;
+        
+    }
+    .botones button{
+        max-width: 100%;
+    }
+    
+}
